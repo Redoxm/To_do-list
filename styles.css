@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(244, 244, 244, 0.668);
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(177, 174, 174, 0.394);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+}
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.task-list li:last-child {
+    margin-bottom: 0;
+}
+.task-text {
+    flex: 1;
+}
+.task-controls {
+    flex-shrink: 0;
+}
+.task-controls button {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.task-controls button.complete {
+    background-color: #28a745;
+}
+.add-task {
+    display: flex;
+    margin-top: 20px;
+}
+.add-task input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.add-task button {
+    flex-shrink: 0;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+ /* Media queries for responsiveness */
+ @media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .header {
+        font-size: 24px;
+    }
+    .task-list li {
+        flex-direction: column;
+    }
+    .task-text {
+        margin-bottom: 10px;
+    }
+    .task-controls {
+        margin-top: 10px;
+        justify-content: space-between;
+        width: 100%;
+        display: flex;
+    }
+    .task-controls button {
+        width: 48%;
+    }
+}
+
+
+
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
