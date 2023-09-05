@@ -1,5 +1,4 @@
 # # To-Do List Web Application
-![To-Do List Screenshot](""C:\Users\HP\Pictures\to-do.jpeg"")
 
 This is a simple and responsive web application that allows you to manage your tasks with ease.
 ## Demo
